@@ -26,7 +26,7 @@ function callbackGetAllFilms(){
 
 function changeOpeningCrawl(newCrawl){
   var p = document.querySelector(".flow p");
-  newCrawl = newCrawl.replace("\n", '<br>')
+  newCrawl = newCrawl.replace(/(?:\r\n|\r|\n)/g, '<br />');
   p.innerHTML = newCrawl;
 }
 
